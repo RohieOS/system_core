@@ -1166,10 +1166,28 @@ static void ProcessKernelCmdline() {
 }
 
 static void SetSafetyNetProps() {
-    InitPropertySet("ro.boot.flash.locked", "1");
-    InitPropertySet("ro.boot.verifiedbootstate", "green");
-    InitPropertySet("ro.boot.veritymode", "enforcing");
-    InitPropertySet("ro.boot.vbmeta.device_state", "locked");
+    InitPropertySet("ro.boot.vbmeta.device_state", "locked"); // ro.boot.vbmeta.device_state
+    InitPropertySet("ro.boot.verifiedbootstate", "green"); // ro.boot.verifiedbootstate
+    InitPropertySet("ro.boot.flash.locked", "1"); // ro.boot.flash.locked
+    InitPropertySet("ro.boot.selinux", "enforcing"); // ro.boot.selinux
+    InitPropertySet("ro.boot.veritymode", "enforcing"); // ro.boot.veritymode
+    InitPropertySet("ro.boot.warranty_bit", "0"); // ro.boot.warranty_bit
+    InitPropertySet("ro.warranty_bit", "0"); // ro.warranty_bit
+    InitPropertySet("ro.debuggable", "0"); // ro.debuggable
+    InitPropertySet("ro.secure", "1"); // ro.secure
+    InitPropertySet("ro.build.type", "user"); // ro.build.type
+    InitPropertySet("ro.system.build.type", "user"); // ro.system.build.type
+    InitPropertySet("ro.system_ext.build.type", "user"); // ro.system_ext.build.type
+    InitPropertySet("ro.vendor.build.type", "user"); // ro.vendor.build.type
+    InitPropertySet("ro.product.build.type", "user"); // ro.product.build.type
+    InitPropertySet("ro.odm.build.type", "user"); // ro.odm.build.type
+    InitPropertySet("ro.build.keys", "release-keys"); // ro.build.keys
+    InitPropertySet("ro.build.tags", "release-keys"); // ro.build.tags
+    InitPropertySet("ro.system.build.tags", "release-keys"); // ro.system.build.tags
+    InitPropertySet("ro.vendor.boot.warranty_bit", "0"); // ro.vendor.boot.warranty_bit
+    InitPropertySet("ro.vendor.warranty_bit", "0"); // ro.vendor.warranty_bit
+    InitPropertySet("vendor.boot.vbmeta.device_state", "locked"); // vendor.boot.vbmeta.device_state
+    InitPropertySet("vendor.boot.verifiedbootstate", "green"); // vendor.boot.verifiedbootstate
 }
 
 void PropertyInit() {
